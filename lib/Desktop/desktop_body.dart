@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:portofolio/Desktop/widget.dart';
 import 'package:portofolio/const.dart';
 
 class DesktopLayout extends StatefulWidget {
@@ -25,23 +26,23 @@ class _DesktopLayoutState extends State<DesktopLayout> {
 
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
               image: AssetImage("assets/bg.jpg"), fit: BoxFit.fill),
         ),
         child: CustomScrollView(slivers: [
           SliverPadding(
-            padding: EdgeInsets.symmetric(
+            padding: const EdgeInsets.symmetric(
               horizontal: mainPadding,
             ),
             sliver: SliverAppBar(
-              shape: RoundedRectangleBorder(
+              shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.only(
                   bottomRight: Radius.circular(12),
                   bottomLeft: Radius.circular(12),
                 ),
               ),
-              expandedHeight: 100,
+              expandedHeight: 60,
               // animasi transisi appbar
               snap: true,
               // animasi scrolling ke atas untuk melihat appbar
@@ -51,22 +52,28 @@ class _DesktopLayoutState extends State<DesktopLayout> {
               backgroundColor: scrollController.hasClients &&
                       scrollController.position.minScrollExtent == true
                   ? Colors.transparent
-                  : Colors.blue,
+                  : Colors.black87,
               flexibleSpace: Center(
                 child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: mainPadding),
+                  padding: const EdgeInsets.symmetric(horizontal: mainPadding),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        "REZA",
-                        style: GoogleFonts.poppins(
-                          fontSize: 22,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
+                      MouseRegion(
+                        cursor: SystemMouseCursors.click,
+                        child: GestureDetector(
+                          onTap: () {},
+                          child: Text(
+                            "REZAWAHYU",
+                            style: GoogleFonts.poppins(
+                              fontSize: 22,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                          ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 500,
                       ),
                       Expanded(
@@ -75,7 +82,7 @@ class _DesktopLayoutState extends State<DesktopLayout> {
                           children: [
                             MouseRegion(
                               cursor: SystemMouseCursors.click,
-                              child: GestureDetector(
+                              child: InkWell(
                                 onTap: () {},
                                 child: Text(
                                   "Profile",
@@ -89,21 +96,7 @@ class _DesktopLayoutState extends State<DesktopLayout> {
                             ),
                             MouseRegion(
                               cursor: SystemMouseCursors.click,
-                              child: GestureDetector(
-                                onTap: () {},
-                                child: Text(
-                                  "Education",
-                                  style: GoogleFonts.poppins(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w600,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            MouseRegion(
-                              cursor: SystemMouseCursors.click,
-                              child: GestureDetector(
+                              child: InkWell(
                                 onTap: () {},
                                 child: Text(
                                   "Experience",
@@ -117,7 +110,21 @@ class _DesktopLayoutState extends State<DesktopLayout> {
                             ),
                             MouseRegion(
                               cursor: SystemMouseCursors.click,
-                              child: GestureDetector(
+                              child: InkWell(
+                                onTap: () {},
+                                child: Text(
+                                  "Education",
+                                  style: GoogleFonts.poppins(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w600,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            MouseRegion(
+                              cursor: SystemMouseCursors.click,
+                              child: InkWell(
                                 onTap: () {},
                                 child: Text(
                                   "Project",
@@ -131,24 +138,10 @@ class _DesktopLayoutState extends State<DesktopLayout> {
                             ),
                             MouseRegion(
                               cursor: SystemMouseCursors.click,
-                              child: GestureDetector(
+                              child: InkWell(
                                 onTap: () {},
                                 child: Text(
                                   "Contact",
-                                  style: GoogleFonts.poppins(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w600,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            MouseRegion(
-                              cursor: SystemMouseCursors.click,
-                              child: GestureDetector(
-                                onTap: () {},
-                                child: Text(
-                                  "Download CV",
                                   style: GoogleFonts.poppins(
                                     fontSize: 16,
                                     fontWeight: FontWeight.w600,
@@ -167,99 +160,38 @@ class _DesktopLayoutState extends State<DesktopLayout> {
             ),
           ),
           SliverList(
-            delegate: SliverChildListDelegate([
-              Container(
-                height: MediaQuery.of(context).size.height,
-                margin: EdgeInsets.only(
-                  top: 50,
-                ),
-                child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: mainPadding),
-                  child: Row(
-                    children: [
-                      Container(
-                        decoration: BoxDecoration(
-                            image: DecorationImage(image: AssetImage(''))),
-                      ),
-                      Expanded(
-                          child: Column(
-                        children: [
-                          Text("data"),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Text("Perkenalan")
-                        ],
-                      ))
-                    ],
+            delegate: SliverChildListDelegate(
+              [
+                // head
+                HeadSection(),
+                // Profile
+                ProfileSection(),
+                // Experience
+                ExperienceSection(),
+                // Education
+                EducationSection(),
+                // Project
+                ProjectSection(),
+                // Contact
+                ContactSection(),
+                // Bottom Navigation
+                Container(
+                  height: 60,
+                  decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 28, 37, 65),
+                  ),
+                  child: Center(
+                    child: Text(
+                      "Design By Reza Wahyu Adinata",
+                      style: GoogleFonts.poppins(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.white),
+                    ),
                   ),
                 ),
-              ),
-              Container(
-                height: MediaQuery.of(context).size.height,
-                decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 28, 37, 65),
-                ),
-                margin: EdgeInsets.only(
-                  top: 50,
-                ),
-                child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: mainPadding),
-                  child: Placeholder(),
-                ),
-              ),
-              Container(
-                height: MediaQuery.of(context).size.height,
-                margin: EdgeInsets.only(
-                  top: 50,
-                ),
-                child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: mainPadding),
-                  child: Placeholder(),
-                ),
-              ),
-              Container(
-                height: MediaQuery.of(context).size.height,
-                decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 28, 37, 65),
-                ),
-                margin: EdgeInsets.only(
-                  top: 50,
-                ),
-                child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: mainPadding),
-                  child: Placeholder(),
-                ),
-              ),
-              Container(
-                height: MediaQuery.of(context).size.height,
-                margin: EdgeInsets.only(
-                  top: 50,
-                ),
-                child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: mainPadding),
-                  child: Placeholder(),
-                ),
-              ),
-              Container(
-                height: 60,
-                decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 28, 37, 65),
-                ),
-                margin: EdgeInsets.only(
-                  top: 50,
-                ),
-                child: Center(
-                  child: Text(
-                    "Design By Reza Wahyu Adinata",
-                    style: GoogleFonts.poppins(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.white),
-                  ),
-                ),
-              ),
-            ]),
+              ],
+            ),
           ),
         ]),
       ),
