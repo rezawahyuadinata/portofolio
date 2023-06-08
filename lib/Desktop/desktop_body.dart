@@ -73,12 +73,11 @@ class _DesktopLayoutState extends State<DesktopLayout> {
                           ),
                         ),
                       ),
-                      const SizedBox(
-                        width: 500,
-                      ),
+                      // const SizedBox(
+                      //   width: 500,
+                      // ),
                       Expanded(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        child: ListView(
                           children: [
                             MouseRegion(
                               cursor: SystemMouseCursors.click,

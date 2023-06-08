@@ -321,6 +321,91 @@ class ExperienceSection extends StatelessWidget {
                 ),
               ),
             ),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Image.asset(
+                  'assets/office.png',
+                  width: 200,
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Flexible(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        width: MediaQuery.of(context).size.width / 3,
+                        padding: const EdgeInsets.symmetric(horizontal: 10),
+                        child: Text(
+                          'Advanced Laboratory System Computer',
+                          style: GoogleFonts.poppins(
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ),
+                      Container(
+                        width: MediaQuery.of(context).size.width / 3,
+                        padding: const EdgeInsets.symmetric(horizontal: 10),
+                        child: Text(
+                          'University Of Gunadarma',
+                          style: GoogleFonts.poppins(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ),
+                      Container(
+                        width: MediaQuery.of(context).size.width / 3,
+                        padding: const EdgeInsets.symmetric(horizontal: 10),
+                        child: Text(
+                          'Jul 2020 - Mar 2022',
+                          style: GoogleFonts.poppins(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w300,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Container(
+                        width: MediaQuery.of(context).size.width / 3,
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          color: Colors.white60,
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(12),
+                          ),
+                          border: Border.all(
+                            width: 3.0,
+                            color: Colors.blue.shade100,
+                          ),
+                        ),
+                        child: Text(
+                          'Teach computer system students to create mobile-based applications, build network structures, and provide support services for students who want to ask technical questions.',
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 5,
+                          style: GoogleFonts.poppins(
+                            fontSize: 16,
+                            fontWeight: FontWeight.normal,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            GarisVertical(),
             Row(
               children: [
                 Image.asset(
@@ -332,36 +417,72 @@ class ExperienceSection extends StatelessWidget {
                 ),
                 Flexible(
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
-                        padding: EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 250, 248, 240),
-                          border: Border.all(color: Colors.blue.shade300),
+                        width: MediaQuery.of(context).size.width / 3,
+                        padding: const EdgeInsets.symmetric(horizontal: 10),
+                        child: Text(
+                          'IT Consultant',
+                          style: GoogleFonts.poppins(
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black,
+                          ),
                         ),
-                        child: Text('Advanced Laboratory System Computer',
-                            style: GoogleFonts.poppins()),
                       ),
                       Container(
-                        padding: EdgeInsets.all(10),
+                        width: MediaQuery.of(context).size.width / 3,
+                        padding: const EdgeInsets.symmetric(horizontal: 10),
+                        child: Text(
+                          'Ministry of Public Works and Housing',
+                          style: GoogleFonts.poppins(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ),
+                      Container(
+                        width: MediaQuery.of(context).size.width / 3,
+                        padding: const EdgeInsets.symmetric(horizontal: 10),
+                        child: Text(
+                          'May 2022 - Dec 2022',
+                          style: GoogleFonts.poppins(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w300,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Container(
+                        width: MediaQuery.of(context).size.width / 3,
+                        padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 250, 248, 240),
-                          border: Border.all(color: Colors.blue.shade300),
+                          color: Colors.white60,
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(12),
+                          ),
+                          border: Border.all(
+                            width: 3.0,
+                            color: Colors.blue.shade100,
+                          ),
                         ),
                         child: Text(
-                            '''Mengajarkan para mahasiwa sistem komputer dalam membuat aplikasi berbasis mobile ,membangun struktur jaringan ,dan memberikan pelayanan dukungan untuk kepada mahasiswa yang ingin bertanya hal teknis'''),
+                          'Responsible for developing risk management information system applications, maintaining the scope of the information system both applications and system servers, and serving assistance in using applications or complaints about application errors.',
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 5,
+                          style: GoogleFonts.poppins(
+                            fontSize: 16,
+                            fontWeight: FontWeight.normal,
+                          ),
+                        ),
                       ),
                     ],
                   ),
-                )
-              ],
-            ),
-            SizedBox(),
-            Row(
-              children: [
-                Image.asset(
-                  'assets/office.png',
-                  width: 200,
                 ),
               ],
             ),
