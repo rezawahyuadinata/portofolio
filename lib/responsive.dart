@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 class ResponsiveLayar extends StatelessWidget {
   ResponsiveLayar({required this.mobileBody, required this.desktopBody});
