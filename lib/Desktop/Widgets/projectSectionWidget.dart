@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-
 import '../../const.dart';
-import 'gambar.dart';
+import 'sub_widget/gambar.dart';
 
-class SkillsSection extends StatelessWidget {
-  const SkillsSection({
+class ProjectSection extends StatelessWidget {
+  const ProjectSection({
     super.key,
   });
 
@@ -21,11 +19,11 @@ class SkillsSection extends StatelessWidget {
               height: 100,
               child: CustomPaint(
                 size: Size(200, 200),
-                painter: SubtittleContainer("Skills"),
+                painter: SubtittleContainer("Project"),
               ),
             ),
             SizedBox(
-              height: 200,
+              height: subtitlePadding,
             ),
             Container(
               padding: EdgeInsets.symmetric(horizontal: mainPadding * 1.5),

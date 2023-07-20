@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:portofolio/Desktop/widget_tools/contactSectionWidget.dart';
-import 'package:portofolio/Desktop/widget_tools/headsectionWidget.dart';
-import 'package:portofolio/Desktop/widget_tools/profileSectionWidget.dart';
-import 'package:portofolio/Desktop/widget_tools/projectSectionWidget.dart';
-import 'package:portofolio/Desktop/widget_tools/skillSectionWidget.dart';
+import 'package:portofolio/Desktop/Widgets/contactSectionWidget.dart';
+import 'package:portofolio/Desktop/Widgets/headsectionWidget.dart';
+import 'package:portofolio/Desktop/Widgets/profileSectionWidget.dart';
+import 'package:portofolio/Desktop/Widgets/projectSectionWidget.dart';
+import 'package:portofolio/Desktop/Widgets/skillSectionWidget.dart';
 import 'package:portofolio/const.dart';
 
-import 'widget_tools/tittleHeader.dart';
+import 'Widgets/sub_widget/tittleHeader.dart';
 
 class DesktopLayout extends StatefulWidget {
   const DesktopLayout({super.key});
@@ -40,7 +40,7 @@ class _DesktopLayoutState extends State<DesktopLayout> {
               backgroundColor: Colors.transparent,
               flexibleSpace: Center(
                 child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -53,7 +53,7 @@ class _DesktopLayoutState extends State<DesktopLayout> {
                       ),
                       Expanded(
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             TittleHeader(
                                 textHeader: "Home",
@@ -83,15 +83,25 @@ class _DesktopLayoutState extends State<DesktopLayout> {
             delegate: SliverChildListDelegate(
               [
                 // head
-                HeadSection(),
+                Container(
+                    padding: const EdgeInsets.only(bottom: contentPadding),
+                    child: HeadSection()),
                 // Profile
-                ProfileSection(),
+                Container(
+                    padding: const EdgeInsets.only(bottom: contentPadding),
+                    child: ProfileSection()),
                 // Skills
-                SkillsSection(),
+                Container(
+                    padding: const EdgeInsets.only(bottom: contentPadding),
+                    child: SkillsSection()),
                 // Project
-                ProjectSection(),
+                Container(
+                    padding: const EdgeInsets.only(bottom: contentPadding),
+                    child: ProjectSection()),
                 // Contact
-                ContactSection(),
+                Container(
+                    padding: const EdgeInsets.only(bottom: contentPadding),
+                    child: ContactSection()),
                 // Bottom Navigation
                 Container(
                   height: 60,
