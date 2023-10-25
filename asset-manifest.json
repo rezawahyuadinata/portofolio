@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/portofolio/static/css/main.63566280.css",
+    "main.js": "/portofolio/static/js/main.675e45b0.js",
+    "static/media/fotoprofil.png": "/portofolio/static/media/fotoprofil.f49784f72630b155c96a.png",
+    "static/media/figma.png": "/portofolio/static/media/figma.06ab420be68591834441.png",
+    "static/media/waroenkbude.png": "/portofolio/static/media/waroenkbude.9e9b2c95f3c35a29d85d.png",
+    "static/media/sikimr.png": "/portofolio/static/media/sikimr.a6779db20c6c20fb18bb.png",
+    "static/media/sdlc.jpg": "/portofolio/static/media/sdlc.226fdc8dec61ed5794cd.jpg",
+    "static/media/bukumanual.png": "/portofolio/static/media/bukumanual.b9583f25d45fc5e64ad8.png",
+    "static/media/linux.png": "/portofolio/static/media/linux.eb9d2c1e65db0f1ca427.png",
+    "static/media/golang.png": "/portofolio/static/media/golang.183c24a24a8bca97300b.png",
+    "static/media/github.png": "/portofolio/static/media/github.a3f151acbf03855fd949.png",
+    "static/media/docker.png": "/portofolio/static/media/docker.ed6e8eea83857aee6f6f.png",
+    "static/media/laravel.png": "/portofolio/static/media/laravel.e430d952e72075f15bf0.png",
+    "static/media/react.png": "/portofolio/static/media/react.c2a6ac864c4ccb52e12e.png",
+    "static/media/sql.png": "/portofolio/static/media/sql.bc6ce2c7a56671016105.png",
+    "static/media/javascript.png": "/portofolio/static/media/javascript.3dfb665e058d08c99f28.png",
+    "static/media/instagram.svg": "/portofolio/static/media/instagram.a0a9a83448ddb5827d70493a84d37806.svg",
+    "static/media/github.svg": "/portofolio/static/media/github.e35c71752b296aa276f44b3be062ef25.svg",
+    "static/media/twitter.svg": "/portofolio/static/media/twitter.e0cf1fcc791b8372662dcb30b67c2020.svg",
+    "static/media/linkedin.svg": "/portofolio/static/media/linkedin.c341cc1c307221b0fe42599c619ceeaf.svg",
+    "index.html": "/portofolio/index.html",
+    "main.63566280.css.map": "/portofolio/static/css/main.63566280.css.map",
+    "main.675e45b0.js.map": "/portofolio/static/js/main.675e45b0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.63566280.css",
+    "static/js/main.675e45b0.js"
+  ]
+}
